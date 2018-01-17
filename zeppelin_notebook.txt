@@ -1,0 +1,6 @@
+%pyspark
+sc.addPyFile("s3://your_s3_path/my_egg-0.1-py2.7.egg")
+from my_egg import *
+
+obj = MyClass(sqlContext)
+obj.do_map()

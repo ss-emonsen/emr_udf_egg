@@ -1,0 +1,63 @@
+[
+    {
+        "Classification": "capacity-scheduler",
+        "Configurations": [],
+        "Properties": {
+            "yarn.scheduler.capacity.resource-calculator": "org.apache.hadoop.yarn.util.resource.DominantResourceCalculator"
+        }
+    },
+    {
+        "Classification": "emrfs-site",
+        "Configurations": [],
+        "Properties": {
+            "fs.s3.enableServerSideEncryption": "true"
+        }
+    },
+    {
+        "Classification": "spark-defaults",
+        "Configurations": [],
+        "Properties": {
+            "spark.driver.cores": "1",
+            "spark.driver.memory": "4096M",
+            "spark.executor.cores": "2",
+            "spark.executor.memory": "9760M",
+            "spark.io.compression.codec": "lzf",
+            "spark.yarn.executor.memoryOverhead": "1952M",
+            "spark.yarn.maxAppAttempts": "1"
+        }
+    },
+    {
+        "Classification": "hadoop-env",
+        "Configurations": [
+            {
+                "Classification": "export",
+                "Configurations": [],
+                "Properties": {
+                    "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+                }
+            }
+        ],
+        "Properties": {}
+    },
+    {
+        "Classification": "spark-env",
+        "Configurations": [
+            {
+                "Classification": "export",
+                "Configurations": [],
+                "Properties": {
+                    "JAVA_HOME": "/usr/lib/jvm/java-1.8.0"
+                }
+            }
+        ],
+        "Properties": {}
+    },
+    {
+        "Classification": "mapred-site",
+        "Configurations": [],
+        "Properties": {
+            "mapred.output.committer.class": "org.apache.hadoop.mapred.FileOutputCommitter",
+            "mapreduce.fileoutputcommitter.algorithm.version": "2"
+        }
+    }
+]
